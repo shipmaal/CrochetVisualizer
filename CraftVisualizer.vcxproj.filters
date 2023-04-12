@@ -75,6 +75,7 @@
     <ClInclude Include="CraftVisualizerMain.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Crocheter.h" />
+    <ClInclude Include="MeshStructures.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\StoreLogo.png">
