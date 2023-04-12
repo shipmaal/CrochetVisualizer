@@ -2,6 +2,7 @@
 
 #include <vector>
 
+#include "MeshStructures.h"
 
 namespace Crochet
 {
@@ -16,12 +17,7 @@ namespace Crochet
 		void DecreaseStitch();
 		void IncreaseStitch();
 
-		struct CrochetMesh
-		{
-			int index;
-			int* connected;
-
-		};
+		Mesh mesh;
 
 	private:
 		int index;
