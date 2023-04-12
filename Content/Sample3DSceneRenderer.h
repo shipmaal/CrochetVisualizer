@@ -39,7 +39,8 @@ namespace CraftVisualizer
 
 		// System resources for cube geometry.
 		ModelViewProjectionConstantBuffer	m_constantBufferData;
-		uint32	m_indexCount;
+		UINT32 m_indexCount;
+		
 
 		// Variables used with the rendering loop.
 		bool	m_loadingComplete;

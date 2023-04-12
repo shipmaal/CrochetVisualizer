@@ -70,12 +70,13 @@
     <ClCompile Include="CraftVisualizerMain.cpp" />
     <ClCompile Include="pch.cpp" />
     <ClCompile Include="Crocheter.cpp" />
+    <ClCompile Include="MeshStructure.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CraftVisualizerMain.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Crocheter.h" />
-    <ClInclude Include="MeshStructures.h" />
+    <ClInclude Include="MeshStructure.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\StoreLogo.png">
