@@ -1,0 +1,61 @@
+﻿<Page
+    x:Class="CraftVisualizer.DirectXPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CraftVisualizer"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.Resources>
+        <DataTemplate x:Name="MyDataTemplate">
+            <TextBlock Text="{Binding }" />
+        </DataTemplate>
+    </Page.Resources>
+
+    <Grid x:Name="AppLayout" Height="NaN" Width="NaN">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition />
+
+        </Grid.ColumnDefinitions>
+
+
+        <SwapChainPanel x:Name="swapChainPanel" Grid.Column="1" Width="NaN">
+            <TextBlock Text="Hello from XAML!"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                FontSize="30" SelectionChanged="TextBlock_SelectionChanged" />
+        </SwapChainPanel>
+
+        <StackPanel x:Name="SideMenu" Grid.Column="0" Background="#858585">
+            <TextBlock Text="Enter your pattern here" FontWeight="Bold" FontSize="24" Margin="10 5 0 10" />
+            <TextBox x:Name="PatternTextBox" 
+                     Margin="10 0 10 10" 
+                     TextChanged="PatternTextBox_TextChanged"
+                     HorizontalAlignment="Left" 
+                     CornerRadius="2 2 2 2" 
+                     Width="325" Height="90" 
+                     AcceptsReturn="True" 
+                     Text="" BorderThickness="1 1 1 1" />
+            <Button x:Name="AddStep" Content="Add Step" 
+                    Width="100" Click="AddStep_Click"
+                    Margin="10 0 0 0" Height="30" />
+            <TextBlock x:Name="StepsList" Margin="10 0 0 0"/>
+
+        </StackPanel>
+
+
+    </Grid>
+
+    <Page.BottomAppBar>
+        <AppBar x:Name="bottomAppBar" Padding="10,0,10,0">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                <AppBarButton AutomationProperties.Name="Sample Button"
+                      AutomationProperties.AutomationId="SampleAppBarButton"
+                      Click="AppBarButton_Click"/>
+            </StackPanel>
+        </AppBar>
+    </Page.BottomAppBar>
+</Page>
