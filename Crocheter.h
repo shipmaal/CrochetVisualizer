@@ -21,6 +21,7 @@ namespace Crochet
 
 	private:
 		int index;
+		Section section;
 
 
 
